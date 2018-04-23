@@ -25,7 +25,7 @@ build-essential libtool autoconf libssl-dev libboost-dev libboost-chrono-dev lib
 libboost-system-dev libboost-test-dev libboost-thread-dev sudo automake git wget pwgen curl libdb4.8-dev bsdmainutils \
 libdb4.8++-dev libminiupnpc-dev libgmp3-dev ufw pwgen
 clear
-}
+
 
 if [ "$?" -gt "0" ];
   then
@@ -39,7 +39,6 @@ libboost-program-options-dev libboost-system-dev libboost-test-dev libboost-thre
 bsdmainutils libdb4.8++-dev libminiupnpc-dev libgmp3-dev ufw"
  exit 1
 fi
-
 
 clear
 echo -e "Checking if you are using a cheap VPS."
@@ -232,4 +231,23 @@ function setup_node() {
 
 ##### Main #####
 clear
+
+checks
+if [[ ("$NEW_CROP" == "y" || "$NEW_CROP" == "Y") ]]; then
+  setup_node
+  exit 0
+elif [[ "$NEW_CROP" == "new" ]]; then
+  prepare_system
+  ask_permission
+  if [[ "$ZOLDUR" == "YES" ]]; then
+    deploy_binaries
+  else
+    compile_cropcoin
+  fi
+  setup_node
+else
+  echo -e "${GREEN}Cropcoind already running.${NC}"
+  exit 0
+fi
+
 
