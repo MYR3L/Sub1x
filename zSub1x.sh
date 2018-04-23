@@ -30,14 +30,7 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-if [ -n "$(pidof zsub1xd)" ]; then
-  echo -e "${GREEN}\c"
-  read -e -p "zSub1x is already on. Proceed adding a new one? [Y/N]" NEW_zSub1x
-  echo -e "{NC}"
-  clear
-else
-  NEW_zSub1x="new"
-fi
+
 }
 
 function prepare_system() {
