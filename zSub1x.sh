@@ -10,15 +10,6 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 
-function compile_error() {
-if [ "$?" -gt "0" ];
- then
-  echo -e "${RED}Failed to compile $@. Please investigate.${NC}"
-  exit 1
-fi
-}
-
-
 function prepare_system() {
 
 echo -e "Getting ready to install zSub1x Masternode."
