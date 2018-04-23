@@ -55,7 +55,7 @@ else
   echo -e "${GREEN}Server performance good.${NC}"
 fi
 clear
-}
+
 
 
 
