@@ -230,20 +230,3 @@ function setup_node() {
 ##### Main #####
 clear
 
-checks
-if [[ ("$NEW_SUB1X" == "y" || "$NEW_SUB1X" == "Y") ]]; then
-  setup_node
-  exit 0
-elif [[ "$NEW_SUB1X" == "new" ]]; then
-  prepare_system
-  ask_permission
-  if [[ "$MYR3L" == "YES" ]]; then
-    deploy_binaries
-  else
-    compile_zsub1x
-  fi
-  setup_node
-else
-  echo -e "${GREEN}zSub1x already running.${NC}"
-  exit 0
-fi
