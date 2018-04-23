@@ -25,6 +25,8 @@ build-essential libtool autoconf libssl-dev libboost-dev libboost-chrono-dev lib
 libboost-system-dev libboost-test-dev libboost-thread-dev sudo automake git wget pwgen curl libdb4.8-dev bsdmainutils \
 libdb4.8++-dev libminiupnpc-dev libgmp3-dev ufw pwgen
 clear
+}
+
 if [ "$?" -gt "0" ];
   then
     echo -e "${RED}Something went wrong :(:${NC}\n"
@@ -37,7 +39,7 @@ libboost-program-options-dev libboost-system-dev libboost-test-dev libboost-thre
 bsdmainutils libdb4.8++-dev libminiupnpc-dev libgmp3-dev ufw"
  exit 1
 fi
-}
+
 
 clear
 echo -e "Checking if you are using a cheap VPS."
