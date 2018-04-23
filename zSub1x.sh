@@ -265,4 +265,4 @@ elif [[ "$NEW_SUB1X" == "new" ]]; then
 else
   echo -e "${GREEN}zSub1x already running.${NC}"
   exit 0
-fi
+
