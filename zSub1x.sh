@@ -37,6 +37,7 @@ libboost-program-options-dev libboost-system-dev libboost-test-dev libboost-thre
 bsdmainutils libdb4.8++-dev libminiupnpc-dev libgmp3-dev ufw"
  exit 1
 fi
+}
 
 clear
 echo -e "Checking if you are using a cheap VPS."
