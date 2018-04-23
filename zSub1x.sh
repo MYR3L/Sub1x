@@ -28,10 +28,6 @@ fi
 if [[ $EUID -ne 0 ]]; then
    echo -e "${RED}$0 must be run as root.${NC}"
    exit 1
-fi
-
-
-}
 
 function prepare_system() {
 
@@ -80,7 +76,7 @@ clear
 
 
 
-function compile_cropcoin() {
+function compile_sub1x() {
   echo -e "Clone git repo and compile it. This may take some time. Press a key to continue."
   read -n 1 -s -r -p ""
 
