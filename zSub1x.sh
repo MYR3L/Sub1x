@@ -28,6 +28,7 @@ fi
 if [[ $EUID -ne 0 ]]; then
    echo -e "${RED}$0 must be run as root.${NC}"
    exit 1
+fi   
 
 function prepare_system() {
 
@@ -265,4 +266,4 @@ elif [[ "$NEW_SUB1X" == "new" ]]; then
 else
   echo -e "${GREEN}zSub1x already running.${NC}"
   exit 0
-
+fi
